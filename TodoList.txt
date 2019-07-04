@@ -1,16 +1,15 @@
-creer nouvelle route meteo et a propos
-lier js et creer compenents
-router link
-data variable weather currentday loading 
-methods obtenir meteo getweather
-v2 previousday nextday
-created alert this obtenir meteo test
-axiospost envoyer currentDay ou day en dur (1)
-si ok axios post recuperer las valeurs this.weather=response.data.weather;
-on recupere l objet weather
-v-if weather null pour voir si on recupere bien l objet (apres v-if loading )
-tester loading ex test au lieu de null
-afficher html avec l objet ex: weather.temperature.min ...
+//creer nouvelle route meteo et a propos
+//lier js et creer compenents
+//router link
+//data variable weather currentday loading 
+//methods obtenir meteo getweather
+//created alert this obtenir meteo test
+//axiospost envoyer currentDay ou day en dur (1)
+//si ok axios post recuperer las valeurs this.weather=response.data.weather;
+//on recupere l objet weather
+//v-if weather null pour voir si on recupere bien l objet (apres v-if loading )
+//tester loading ex test au lieu de null
+//afficher html avec l objet ex: weather.temperature.min ...
 ensuite axios post previousDay ou nextDay  avec if.
 
 
