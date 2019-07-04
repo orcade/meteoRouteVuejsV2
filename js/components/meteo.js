@@ -34,6 +34,7 @@ data() {
     }
 },
 created() {
+
     this.getweather();
     //alert('test');
 },
@@ -52,36 +53,19 @@ methods: {
         });
     },
 
+
     previousDay() {
-        if (this.currentDay >= 2) {
-            this.currentDay -= 1;
-
-            let params = new URLSearchParams();
-            params.append('day', this.currentDay);
-
-            axios.post(urlApi, params).then(response => {
-                this.loading = false;
-                this.weather = response.data.weather;
-            })
-
+        if (this.currentDay >1) {
+            this.currentDay--,
+            this.getweather();
         }
-
-
     },
 
     nextDay() {
-        if(this.currentDay <=6) {
-            this.currentDay +=1;
-
-            let params = new URLSearchParams();
-            params.append('day',this.currentDay);
-
-            axios.post(urlApi, params).then(response => {
-                this.loading = false;
-                this.weather = response.data.weather;
-
-        })
-    }
+        if (this.currentDay <7) {
+            this.currentDay++,
+            this.getweather();
+        }
     },
 },
 };

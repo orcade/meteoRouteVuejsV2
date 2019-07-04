@@ -11,6 +11,9 @@
 //tester loading ex test au lieu de null
 //afficher html avec l objet ex: weather.temperature.min ...
 //ensuite axios post previousDay ou nextDay  avec if.
+//simplifié code
+v3 ajouter image correspondant a la meteo
+creer son
 
 
 
