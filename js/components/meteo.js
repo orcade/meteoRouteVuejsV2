@@ -29,7 +29,7 @@ data() {
     return {
         weather:null,
         currentDay:1, 
-        loading:true
+        loading:true,
         
     }
 },
@@ -67,5 +67,18 @@ methods: {
             this.getweather();
         }
     },
+
+    created() {
+
+        this.tupeOfWeather();
+        //alert('test');
+    if(this.weather.typeOfWeather==sunny){
+        import sunny from './img/sunny.png';
+
+    }
+    },
 },
 };
+
+
+
