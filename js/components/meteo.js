@@ -16,6 +16,11 @@ const Meteo = {
     
 </p>
 </div>
+<div>
+    <button v-on:click="previousDay">Jour précédent</button>
+    <button v-on:click="nextDay">Jour suivant</button>
+    
+</div>
 
 
 </div>
@@ -52,6 +57,14 @@ methods: {
             
             
         });
-    }
+    },
+
+    previousDay() {
+
+    },
+
+    nextDay() {
+        
+    },
 }
 }
