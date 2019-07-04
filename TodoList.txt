@@ -10,7 +10,7 @@
 //v-if weather null pour voir si on recupere bien l objet (apres v-if loading )
 //tester loading ex test au lieu de null
 //afficher html avec l objet ex: weather.temperature.min ...
-ensuite axios post previousDay ou nextDay  avec if.
+//ensuite axios post previousDay ou nextDay  avec if.
 
 
 

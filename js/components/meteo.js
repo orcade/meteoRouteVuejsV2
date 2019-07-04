@@ -34,15 +34,10 @@ data() {
     }
 },
 created() {
-    // fetch the data when the view is created and the data is
-    // already being observed
     this.getweather();
     //alert('test');
 },
-watch: {
-    // call again the method if the route changes
-    '$route': 'getweather'
-},
+
 methods: {
     
     getweather() {
@@ -50,21 +45,43 @@ methods: {
         params.append('day', this.currentDay);
 
         axios.post(urlApi, params).then(response => {
-            console.log(response);
+            //console.log(response);
             this.loading = false;
             this.weather = response.data.weather;
-           
-            
             
         });
     },
 
     previousDay() {
+        if (this.currentDay >= 2) {
+            this.currentDay -= 1;
+
+            let params = new URLSearchParams();
+            params.append('day', this.currentDay);
+
+            axios.post(urlApi, params).then(response => {
+                this.loading = false;
+                this.weather = response.data.weather;
+            })
+
+        }
+
 
     },
 
     nextDay() {
-        
+        if(this.currentDay <=6) {
+            this.currentDay +=1;
+
+            let params = new URLSearchParams();
+            params.append('day',this.currentDay);
+
+            axios.post(urlApi, params).then(response => {
+                this.loading = false;
+                this.weather = response.data.weather;
+
+        })
+    }
     },
-}
-}
+},
+};
